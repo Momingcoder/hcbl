@@ -8,9 +8,12 @@ class Blacklist(HachiFilter):
     """
     A plugin for Hachi to block spam words.
     """
-    def __init__(self):
+    def __init__(self, fp=None):
         self.wm = None
-        self.filepath = './data/blacklist.csv'
+        if fp == None:
+            self.filepath = './data/blacklist.csv'
+        else:
+            self.filepath = fp
         self.load_model()
 
     def load_model(self):
@@ -19,7 +22,8 @@ class Blacklist(HachiFilter):
 
     def predict(self, msg, level=0):
         blacklist_result = self.wm.Search(msg)
-        if blacklist_result != {}:
+        print blacklist_result
+        if blacklist_result[0] != {}:
             return True
         return False
 
