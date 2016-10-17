@@ -22,7 +22,7 @@ class Blacklist(HachiFilter):
 
     def predict(self, msg, level=0):
         blacklist_result = self.wm.Search(msg)
-        print blacklist_result
+        # print blacklist_result
         if blacklist_result[0] != {}:
             return True
         return False
