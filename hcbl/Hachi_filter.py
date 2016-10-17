@@ -4,13 +4,18 @@
 import pickle
 import os
 
-def file2list(filename):
-    if not isinstance(filename, str):
+def u(x):
+    if not isinstance(x, unicode):
+        return x.decode('utf-8')
+    return x
+
+def file2list(f):
+    if not isinstance(f, str):
         raise TypeError
     listr = []
-    with open(filename, 'r') as ff:
+    with open(f, 'r') as ff:
         for line in ff.readlines():
-            listr.append(line.strip())
+            listr.append(u(line.strip()))
     return listr
 
 class HachiFilter(object):
