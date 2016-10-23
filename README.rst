@@ -13,6 +13,13 @@ Usage
     > bl = Blacklist()
     > bl.predict(message)
 
+Configuration
+--------------
+
+::
+
+    > ('hcbl', 'Blacklist()', 'blacklist')
+
 Attention
 ----------
 
