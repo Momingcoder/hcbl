@@ -1,6 +1,9 @@
 hcbl
 ===========
 
+.. image:: https://travis-ci.org/Momingcoder/hcbl.svg?branch=master
+    :target: https://travis-ci.org/Momingcoder/hcbl
+
 A plugin for Hachi_ to block spam words.
 
 .. _Hachi: https://github.com/guokr/Hachi
