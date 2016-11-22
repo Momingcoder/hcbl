@@ -2,7 +2,7 @@
 # coding=utf-8
 
 import unittest
-from blacklist import Blacklist
+from hcbl.blacklist import Blacklist
 
 class BlacklistTestCase(unittest.TestCase):
     """
